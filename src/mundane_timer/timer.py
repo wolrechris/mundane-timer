@@ -3,7 +3,7 @@ import pandas as pd
 from contextlib import contextmanager
 from enum import Enum
 
-class timer:
+class Timer:
     """
     A utility class for timing code execution across multiple labeled blocks.
     Results can be logged automatically, printed at program exit, or exported
@@ -56,7 +56,6 @@ class timer:
             self.context_vars = context_vars
         self.log = log
         if log.value == "full" or log.value == "results_only":
-            print("SAJFDKJSAFDLJSAFLSAFDJLALSDJFLSADJFALSKJFALKSFJASLKFDJSF")
             atexit.register(functools.partial(self.print_results))
         elif log.value == "inherit":
             raise ValueError("Cannot use log setting inherit as no previous log setting was specified!")
