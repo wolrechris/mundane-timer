@@ -67,7 +67,7 @@ class Timer:
         Context manager that measures and records the execution time of a code block.
 
         Usage:
-            >>> t = timer("Example")
+            >>> t = Timer("Example")
             >>> with t.record("load_data"):
             ...     load_data_function()
 

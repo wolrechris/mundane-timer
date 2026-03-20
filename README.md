@@ -22,13 +22,13 @@ pip install mundane-timer/
 ## Basic Usage
 
 ```python
-from mundane_timer.timer import timer
+from mundane_timer import Timer
 
 # Create a timer instance
-t = timer("example")
+t = Timer("example timer")
 
 # Time a code block
-with t.record("sleep"):
+with t.record("a sleep function"):
     import time
     time.sleep(1)
 ```
@@ -40,7 +40,7 @@ At program exit, results are automatically printed (default behavior).
 The timer supports different logging behaviors via `LogSetting`:
 
 ```python
-from mundane_timer.timer import timer
+from mundane_timer import Timer
 
 # Available log settings:
 # - NONE
